@@ -20,12 +20,12 @@ public class VendingMachine {
 
     public VendingMachine() {
 
-        Product product = new Product(121, "Coca Cola", "3 lei", "500 ml");
-        Product product1 = new Product(122, "Fante", "3 lei", "500 ml");
-        Product product2 = new Product(123, "Dorna", "3 lei", "500 ml");
-        Product product3 = new Product(124, "Borsec", "2 lei", "500 ml");
-        Product product4 = new Product(125, "Aloe Vera", "5 lei", "500 ml");
-        Product product5 = new Product(126, "Suc de cactus ☺", "10 lei", "500 ml");
+        Product product = new Product(121, "Coca Cola", 3, "500 ml");
+        Product product1 = new Product(122, "Fanta", 3, "500 ml");
+        Product product2 = new Product(123, "Dorna", 3, "500 ml");
+        Product product3 = new Product(124, "Borsec", 2, "500 ml");
+        Product product4 = new Product(125, "Aloe Vera", 5, "500 ml");
+        Product product5 = new Product(126, "Suc de cactus ☺", 10, "500 ml");
 
 
         productStock.put(product, 4);
@@ -36,9 +36,9 @@ public class VendingMachine {
         productStock.put(product5, 7);
 
 
-        Coin coin = new Coin(10, " 10 lei");
-        Coin coin1 = new Coin(5, " 5 lei");
-        Coin coin2 = new Coin(1, " 1 lei");
+        Coin coin = new Coin(10, 10);
+        Coin coin1 = new Coin(5, 5);
+        Coin coin2 = new Coin(1, 1);
 
         coinStock.put(coin, 2);
         coinStock.put(coin1, 5);
@@ -50,10 +50,13 @@ public class VendingMachine {
 
     public void run() {
 
+
+
         ioService.displayProductStock(productStock);
-        ioService.displayMeniuMessage();
+        ioService.productManager(productStock);
         ioService.displayCoinStock(coinStock);
-        ioService.displayCoinMessage();
+//        ioService.validCoinMessage(coinStock, productStock);
+        ioService.moneyManager(coinStock,productStock);
     }
 
 }

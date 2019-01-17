@@ -3,9 +3,9 @@ package data;
 public class Coin {
 
     private Integer code;
-    private String value;
+    private Integer value;
 
-    public Coin(Integer code, String value) {
+    public Coin(Integer code, Integer value) {
         this.code = code;
         this.value = value;
     }
@@ -18,11 +18,11 @@ public class Coin {
         this.code = code;
     }
 
-    public String getValue() {
+    public Integer getValue() {
         return value;
     }
 
-    public void setValue(String value) {
+    public void setValue(Integer value) {
         this.value = value;
     }
 

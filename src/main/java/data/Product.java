@@ -1,15 +1,15 @@
 package data;
 
-import java.util.Map;
+import static data.CurrencyType.RON;
 
 public class Product {
 
     private Integer code;
     private String name;
-    private String price;
+    private Integer price;
     private String size;
 
-    public Product(Integer code, String name, String price, String size) {
+    public Product(Integer code, String name, Integer price, String size) {
         this.code = code;
         this.name = name;
         this.price = price;
@@ -33,11 +33,11 @@ public class Product {
         this.name = name;
     }
 
-    public String getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(Integer price) {
         this.price = price;
     }
 
@@ -51,7 +51,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" + "code=" + code + ", name='" + name + '\'' + ", price=" + price + ", size='" + size + '\'' + '}';
+        return "Product{" + "code=" + code + ", name='" + name + '\'' + ", price=" + price + RON + ", size='" + size + '\'' + '}';
 
     }
 
